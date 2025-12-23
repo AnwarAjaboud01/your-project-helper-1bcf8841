@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PublicIndex from "./public-index/PublicIndex";
 import HommeIndex from "./homme/HommeIndex";
 import FemmeIndex from "./femme/FemmeIndex";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +22,8 @@ const App = () => (
           <Route path="/" element={<PublicIndex />} />
           <Route path="/homme" element={<HommeIndex />} />
           <Route path="/femme" element={<FemmeIndex />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
