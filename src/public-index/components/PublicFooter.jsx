@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
+import AddProductModal from "@/components/AddProductModal";
 
 const PublicFooter = ({ language }) => {
   const texts = {
@@ -112,8 +113,9 @@ const PublicFooter = ({ language }) => {
 
       {/* Copyright */}
       <div className="border-t border-border py-6">
-        <div className="container text-center text-xs text-muted-foreground">
-          {t.copyright}
+        <div className="container flex flex-col items-center gap-2">
+          <span className="text-xs text-muted-foreground">{t.copyright}</span>
+          <AddProductModal />
         </div>
       </div>
     </footer>
